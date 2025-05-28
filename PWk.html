@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curti Jelszavak</title>
+  <style>
+    body {
+      font-family: Bahnschrift, sans-serif;
+      background: #f4f7f9;
+      color: #333;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+	.back-button {
+  display: inline-block;
+  margin: 10px 0 20px;
+  padding: 8px 16px;
+  background-color: #e0e0e0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+.back-button:hover {
+  background-color: #d0d0d0;
+}
+
+
+    h1 {
+      text-align: center;
+      color: #004c99;
+      margin-bottom: 2rem;
+    }
+
+    .fieldset-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: flex-start;
+    }
+
+    fieldset {
+      flex: 1 1 300px;
+      min-width: 280px;
+      max-width: 100%;
+      border: 2px solid #004c99;
+      border-radius: 10px;
+      padding: 1.5rem;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    legend {
+      font-weight: bold;
+      padding: 0 1rem;
+      color: #004c99;
+    }
+
+    .section {
+      margin-bottom: 1rem;
+    }
+
+    .label {
+      font-weight: bold;
+      display: block;
+      margin-top: 0.5rem;
+      color: #222;
+    }
+
+    .value {
+      margin-left: 1rem;
+      color: #555;
+    }
+
+    ol {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      background: #eee;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+	<a href="index.html" class="back-button">← Vissza</a>
+  <h1>Curti Jelszavak</h1>
+
+  <div class="fieldset-container">
+    <fieldset>
+      <legend>Keyence</legend>
+      <div class="section">
+        <span class="label">1958 operátorba váltáskor:</span>
+        <span class="value">1234</span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Senso-Part</legend>
+      <div class="section"><span class="label">MTD 1:</span> <span class="value">sensoMTD1</span></div>
+      <div class="section"><span class="label">MTD 2:</span> <span class="value">sensoMTD2</span></div>
+      <div class="section"><span class="label">MTD 3:</span> <span class="value">sensoMTD3</span></div>
+      <div class="section"><span class="label">MTD 4:</span> <span class="value">sensoMTD4</span></div>
+      <div class="section"><span class="label">MTD 5:</span> <span class="value">sensoMTD5</span></div>
+      <div class="section"><span class="label">MTD 8:</span> <span class="value">Üresen hagyni (nincs jelszó)</span></div>
+      <div class="section"><span class="label">SF 1:</span> <span class="value">sensoSF1 | ST42-es kamera: admin jelszó: KeyenceSF1 | Operátor jelszó: Monitor</span></div>
+      <div class="section"><span class="label">HFM:</span> <span class="value">sensoHFM</span></div>
+      <div class="section"><span class="label">Hybrid:</span> <span class="value">sensoHYBRID</span></div>
+      <div class="section"><span class="label">SF 2:</span> <span class="value">sensoSF2</span></div>
+      <div class="section"><span class="label">HMTD 1:</span> <span class="value">sensoHMTD1</span></div>
+      <div class="section"><span class="label">HMTD 2:</span> <span class="value">sensoHMTD2</span></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>MTD6 Keyence kamerák hozzáférési útvonala</legend>
+      <ol>
+        <li><strong>1. Lépés:</strong>
+          <ul>
+            <li>Keresőben rákeresni: <code>XG-X Vision Terminal</code></li>
+            <li>Jobb klikk és <em>Open file location</em></li>
+          </ul>
+        </li>
+        <li><strong>2. Lépés:</strong>
+          <ul>
+            <li>Bal klikk → XG-X Terminal ikonra</li>
+            <li>Shift+Jobb klikk → XG-X Terminal ikonra</li>
+            <li>Bal klikk → <em>Run as different user</em></li>
+          </ul>
+        </li>
+        <li><strong>3. Lépés:</strong>
+          <ul>
+            <li><strong>Username:</strong> curti</li>
+            <li><strong>Jelszó:</strong> <code>Wire123!</code></li>
+          </ul>
+        </li>
+      </ol>
+    </fieldset>
+
+    <fieldset>
+      <legend>Engberts</legend>
+      <div class="section">
+        <span class="label">Adjuster felhasználó jelszava:</span>
+        <span class="value">root</span>
+      </div>
+      <div class="section">
+        <span class="label"> ̶A̶d̶m̶i̶n̶ >>> Engineer jelszava:</span>
+        <span class="value"> ̶1̶9̶3̶8̶.̶0̶8̶.̶2̶0̶.̶ >>> Engberts2025.</span>
+      </div>
+    </fieldset>
+  </div>
+</body>
+</html>

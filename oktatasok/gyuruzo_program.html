@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gyűrűző - Programváltás oktató</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #c40000;
+      margin-right: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.1em;
+      color: #000;
+    }
+
+    main {
+      flex: 1;
+      padding: 30px 20px;
+    }
+
+    fieldset {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+    }
+
+    legend {
+      padding: 0 10px;
+      font-weight: bold;
+      color: #c40000;
+    }
+
+    img {
+      max-width: 60%;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Gyűrűző</div>
+    <div class="subtitle">Programváltás – In-Sight Vision Suite oktató</div>
+  </header>
+
+  <main>
+    <fieldset>
+      <legend>Kapcsolódás</legend>
+      <p>
+        Csatlakoztassuk a kamerát a laptophoz. Az In-Sight Vision Suite programban válasszuk ki a kamerát. Fontos:
+      </p>
+      <ul>
+        <li>Az Ethernet cím 192.168.0.X legyen</li>
+        <li>A maszk: 255.255.255.0</li>
+      </ul>
+    </fieldset>
+
+    <fieldset>
+      <legend>Jelenlegi program mentése</legend>
+      <p>Ha mindent jól csináltunk, a következő képet látjuk:</p>
+      <img src="gyuruzo/2.jpg" alt="Program nézet - Excel-szerű" />
+
+      <p>Kattintsunk a <strong>File > Save As</strong> menüpontra:</p>
+      <img src="gyuruzo/3.jpg" alt="Save As menü" />
+
+      <p>A megjelenő ablakban nyomjunk a <strong>Yes</strong> gombra:</p>
+      <img src="gyuruzo/4.jpg" alt="Yes gomb" />
+
+      <p>Bal oldalon válasszuk a <strong>Device</strong> lehetőséget, majd mentsük el:</p>
+      <img src="gyuruzo/6.jpg" alt="Mentés folyamata" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Megfelelő program betöltése</legend>
+      <p>Nyissuk meg a kívánt fájlt a <strong>File > Open</strong> menüpontban:</p>
+      <img src="gyuruzo/10.jpg" alt="File Open" />
+      <img src="gyuruzo/12.jpg" alt="Fájl kiválasztása" />
+
+      <p>Amennyiben figyelmeztetést kapunk, kattintsunk az <strong>Igen</strong> gombra:</p>
+      <img src="gyuruzo/13.jpg" alt="Figyelmeztetés" />
+
+      <p>A program (Job) betöltődik:</p>
+      <img src="gyuruzo/14.jpg" alt="Betöltés folyamata" />
+
+      <p>Az A4-es cella tartalma alapján ellenőrizhetjük a betöltött adatokat.</p>
+      <img src="gyuruzo/17.jpg" alt="A4 cella" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Teszt</legend>
+      <p>Kattintsunk a jobb felső sarokban található <strong>Pause</strong> gombra, majd a <strong>Trigger</strong> lehetőségre:</p>
+      <img src="gyuruzo/20.jpg" alt="Pause / Trigger gomb" />
+
+      <p>Ezután válasszuk az <strong>Online</strong> módot – a programnak működnie kell:</p>
+      <img src="gyuruzo/21.jpg" alt="Online állapot" />
+    </fieldset>
+  </main>
+</body>
+</html>

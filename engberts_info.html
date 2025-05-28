@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engberts Információk</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+	  .back-button {
+  display: inline-block;
+  margin: 10px 0 20px;
+  padding: 8px 16px;
+  background-color: #e0e0e0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+.back-button:hover {
+  background-color: #d0d0d0;
+}
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+      color: #222;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 1.2em;
+      padding: 0 10px;
+      color: #444;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      fieldset {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container"><br>
+<a href="index.html" class="back-button">← Vissza</a>
+
+    <h1>Engberts Információk</h1>
+
+    <fieldset>
+      <legend>Átállás</legend>
+      <ol>
+        <li>Átálláskor legyen nálunk kis kereszt és lapos élű csavarhúzó.</li>
+        <li>Jobb alsó sarokban kattintsunk a "Close" gombra, majd adjuk meg az Adjuster jelszót.</li>
+        <li>Megjelenő programlistából válasszuk ki a megfelelő alapanyagszámú programot.</li>
+        <li>Program kiválasztás után kérni fogja az "X" értéket.</li>
+        <li>Ha az asztal alatti csatlakozások (ethernet, modulok, levegőcső) rendben vannak, a szimbólumok élénk színűek lesznek, indulhat a termelés.</li>
+        <li>Sárga hátterű csatlakozók jelzik az aktuális bekötést – ha más színűeket kell bekötni, piros ethernet kábellel csatlakoztassuk a megfelelő modulba. Zöld gombbal ellenőrizhetjük.</li>
+        <li>Ha modul hiányzik, a monitor bal oldalán megjelenik a modul kódja. Ezeket a 21-es csarnok bal oldalán található fiókos szekrényből vehetjük ki. Fontos, hogy legyen bennük chip.</li>
+        <li>Levegőnyomás hibánál hátul lehet szabályozni, de 6-os érték fölé ne tekerjük.</li><br>
+		<p>Ha mindent rendben találtunk meg kell csinálnunk az 5 EDV darabot, amit beállítónak szólva neki kell beadnia.</p>
+      </ol>
+    </fieldset>
+
+    <fieldset>
+      <legend>Előforduló hibák</legend>
+      <ol>
+        <li>Eltört tű a modulban → nem fogadja el a csatlakozót, pirosan villog a LED. Ha vékony arany tűt látunk, hívjunk méréstechnikusi segítséget (6272).</li>
+        <li>Piros hibajel a modulon → próbáljuk meg benyomni a zöld "Start" gombot.</li>
+        <li>Ház bepattintása nehéz vagy gyorsan kipattan → a modulban lévő kis gombon finomíthatunk egy vékony lapos csavarhúzóval.</li>
+      </ol>
+    </fieldset>
+
+    <fieldset>
+      <legend>Mi az, amit figyelni kell?</legend>
+      <p>A műanyag házak bepattanó részét figyeljük – csak egyféleképpen illeszthetőek be. Hasonló házak esetén a kábel végén lévő kódszám alapján tájékozódjunk (pl.: <code>_01</code>, <code>_02</code>).</p>
+      <p>Alternatívaként a mellékelt műszaki rajz is segíthet.</p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Alapanyagok</legend>
+      <p>Sokféle alapanyag létezik, részletezni és felsorolni nem célszerű.</p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Egyéb</legend>
+      <p>Gépeket ki majd vissza kapcsolni egy piros kapcsoló segítségével lehetséges, jobb hátul aluli részen<br>
+		 Ha valóban nem jó a termék vagy a kábelt ki szeretnénk venni a piros "Stop" gombbal lehet, majd kérni fog egy Adjuster jelszót<br>
+		 Az Engberts csatlakozónál található egy finomhangoló csavar, amelyet lapos fejű csavarhúzóval lehet balra vagy jobbra elfordítani.
+		Balra tekerve a csatlakozó engedékenyebbé válik, jobbra tekerve szorosabb lesz. Túlzott eltekerés egyik irányban sem ajánlott.
+		A beállítás közben ellenőrizd, hogy a kábel könnyen csatlakoztatható legyen, és a fémretesz megfelelően záródjon.<br>
+		 A tesztpult részen óvatosan a fémes felületű csatlakozókkal, inkább kesztyűvel vagy a ház részét érintsük, mivel ráz<br>
+		Tű cseréhez szerszám kell amit a kardexből kell kikérni. Szerszám: "1012313 BIT-GKS-075M" </p>
+    </fieldset>
+  </div>
+</body>
+</html>

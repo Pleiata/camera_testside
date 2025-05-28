@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rosenberger - Kamerás információs oldal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #c40000;
+      margin-right: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.1em;
+      color: #000;
+    }
+
+    main {
+      flex: 1;
+      padding: 30px 20px;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    #searchInput,
+    #oktatasInput {
+      padding: 10px;
+      width: 50%;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .button-link {
+      text-decoration: none;
+    }
+
+    .button {
+      padding: 12px 24px;
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      font-size: 1em;
+      color: #333;
+      transition: all 0.3s ease;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #eaeaea;
+      transform: translateY(-3px);
+      box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    hr {
+      margin: 30px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+
+    fieldset {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+    }
+
+    legend {
+      padding: 0 10px;
+      font-weight: bold;
+      color: #c40000;
+    }
+
+    .file-button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .file-button {
+      padding: 8px 16px;
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 0.95em;
+    }
+
+    .file-button:hover {
+      background-color: #e0e0e0;
+    }
+
+    @media (max-width: 600px) {
+      .button-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+
+      #searchInput,
+      #oktatasInput {
+        width: 90%;
+      }
+
+      .file-button-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Rosenberger</div>
+    <div class="subtitle">- Kamerás információs oldal</div>
+  </header>
+
+  <main>
+    <fieldset>
+      <legend>Infók</legend>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Keresés az infóknál..." onkeyup="filterButtons()" />
+      </div>
+      <div class="button-container" id="buttonContainer">
+        <a href="csomagolo_info.html" class="button-link"><div class="button">Csomagoló program számok</div></a>
+        <a href="engberts_info.html" class="button-link"><div class="button">Engberts információk</div></a>
+        <a href="kamerasok_feladatkorei.html" class="button-link"><div class="button">Kamerások feladatkörei</div></a>
+        <a href="kameras_muszakok_info.html" class="button-link"><div class="button">Kamerás műszakok info</div></a>
+        <a href="napi_aktualis.html" class="button-link"><div class="button">Napi aktuális oldalak</div></a>
+        <a href="szotar.html" class="button-link"><div class="button">Szótár</div></a>
+        <a href="tesla_sor_info.html" class="button-link"><div class="button">Tesla sor információk</div></a>
+        <a href="PWk.html" class="button-link"><div class="button">PWk</div></a>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Oktatások</legend>
+      <div class="search-container">
+        <input type="text" id="oktatasInput" placeholder="Keresés az oktatásokban..." onkeyup="filterOktatas()" />
+      </div>
+      <div class="file-button-group" id="oktatasDocs">
+        <button class="file-button" onclick="window.open('oktatasok/gyuruzo_program.html', '_blank')">Gyűrűző program váltás</button>
+      </div>
+    </fieldset>
+
+    <hr>
+
+    <fieldset>
+      <legend>Engberts dokumentumai</legend>
+      <div class="file-button-group" id="teslaDocs"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Tesla dokumentumai</legend>
+      <div class="file-button-group" id="engbertsDocs"></div>
+    </fieldset>
+  </main>
+
+  <script>
+    function filterButtons() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const buttons = document.querySelectorAll('.button-container .button-link');
+
+      buttons.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        link.style.display = text.includes(input) ? 'inline-block' : 'none';
+      });
+    }
+
+    function filterOktatas() {
+      const input = document.getElementById('oktatasInput').value.toLowerCase();
+      const buttons = document.querySelectorAll('#oktatasDocs .file-button');
+
+      buttons.forEach(btn => {
+        const text = btn.textContent.toLowerCase();
+        btn.style.display = text.includes(input) ? 'inline-block' : 'none';
+      });
+    }
+
+    function fetchDocs(folder, targetId) {
+      fetch(`list_files.php?dir=${folder}`)
+        .then(response => response.json())
+        .then(files => {
+          const container = document.getElementById(targetId);
+          container.innerHTML = '';
+          files.sort().forEach(file => {
+            const button = document.createElement('button');
+            button.className = 'file-button';
+            button.textContent = file;
+            button.onclick = () => window.open(`${folder}/${file}`, '_blank');
+            container.appendChild(button);
+          });
+        });
+    }
+
+    window.onload = function() {
+      fetchDocs('engberts', 'teslaDocs');
+      fetchDocs('tesla', 'engbertsDocs');
+      // fetchDocs('oktatasok', 'oktatasDocs'); // NEM KELL, statikus tartalom van helyette
+    };
+  </script>
+</body>
+</html>

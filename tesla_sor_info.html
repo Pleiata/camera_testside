@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tesla Sor Információk</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      color: #333;
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #eaeaea;
+      transform: translateY(-2px);
+      box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+      color: #111;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #444;
+      padding: 0 10px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      fieldset {
+        padding: 15px;
+      }
+
+      .back-button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-button">← Vissza</a>
+
+    <h1>Tesla Sor Információk</h1>
+
+    <fieldset>
+      <legend>Átállás</legend>
+      <p><strong>Híd esetében:</strong><br>
+        Kamera ellenőrzés és egy teszt pult. A foglalatot a két szélső lefogatónál imbusz kulccsal állítjuk, szélesítjük. Ezután a megfelelő dummy doboz tartalmával dummyzzuk.<br>
+        Teszt pult esetében: híd típusú kábel, elfelezve, különböző hibákkal – a kameráknak ezeket kell kiszűrni. Ebben a dobozban nincs jó dummy darab.
+      </p>
+
+      <p><strong>UFO esetében:</strong><br>
+        Kamera ellenőrzésnél csak egy foglalat van. A kábel kivezetése eltérő:<br>
+        - 1 bepattanós: oldalt jön ki a kábel<br>
+        - 2 bepattanós: alul jön ki a kábel<br>
+        Tesztelés a korábban említett dummy dobozzal történik. Mivel az UFO hasonlít a hídhoz, a kamera azonos elvek alapján szűr.
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Kamera fényerő beállításai</legend>
+      <ul>
+        <li>Exposure Time Cam1 Back Light: <strong>5,00</strong></li>
+        <li>Exposure Time Cam1 Top Light: <strong>1,50</strong></li>
+        <li>Exposure Time Cam2 Back Light: <strong>4,00</strong></li>
+        <li>Exposure Time Cam2 Top Light: <strong>2,50</strong></li>
+      </ul>
+    </fieldset>
+
+    <fieldset>
+      <legend>Mi az, amit figyelni kell?</legend>
+      <p>Felül van a bepattanó rész ellenőrző.<br>
+        Középen két kocka található – ezeknél:</p>
+      <ul>
+        <li>2 zöld kereső (alul és felül)</li>
+        <li>1 sárga vízszintes kereső a kocka belsejében</li>
+      </ul>
+      <p>A két kocka két oldalán:</p>
+      <ul>
+        <li>1-1 kereső, melyek alsó és felső részein 1-1 fehér pontnak kell lennie.</li>
+      </ul>
+      <p>UFO esetében csak a bal oldali kamera képe számít. Híd esetén két kameraképet is figyel a rendszer.</p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Alapanyagok</legend>
+      <ul>
+        <li>B híd (rövidebb)</li>
+        <li>C híd (hosszabb)</li>
+        <li>T01 UFO (1 bepattanós kábel)</li>
+        <li>T02 UFO (2 bepattanós kábel)</li>
+      </ul>
+    </fieldset>
+
+    <fieldset>
+      <legend>Egyéb</legend>
+      <p>A kamerán kizárólag a fényerő állítható.<br>
+        A korábbi 250V-os tesztelés 500V-ra lett módosítva.<br>
+        Tesla soron lévő számítógépeken nehéz megtalálni a Power (bekapcsoló) gombot, felül egy kis fekete gomb.</p>
+    </fieldset>
+  </div>
+</body>
+</html>
