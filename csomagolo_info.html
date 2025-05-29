@@ -1,133 +1,181 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Csomagoló Információk</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #00aaff;
-            text-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            border: 3px solid #00aaff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .info {
-            font-weight: bold;
-            color: #000;
-            margin-bottom: 20px;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-        label, p {
-            margin-bottom: 10px;
-            font-size: 1rem;
-        }
-        .bold {
-            font-weight: bold;
-        }
-        select {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-        }
-        button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            border: none;
-            background-color: #00aaff;
-            color: #fff;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            text-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
-            margin-top: 50px;
-        }
-        button:hover {
-            background-color: #0088cc;
-        }
-        .result {
-            margin-top: 10px;
-            padding: 10px;
-            background: #f1f1f1;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-family: monospace;
-            white-space: pre-wrap;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Csomagoló Információk</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin: 10px 0 20px;
+      padding: 8px 16px;
+      background-color: #e0e0e0;
+      color: #333;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #d0d0d0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+      color: #222;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 1.2em;
+      padding: 0 10px;
+      color: #444;
+    }
+
+    label, select, button, p {
+      font-size: 1em;
+      margin-bottom: 10px;
+      display: block;
+      width: 100%;
+    }
+
+    select {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #007acc;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    .result {
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 6px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      display: none;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      fieldset {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Csomagoló Információk</h1>
-        <div class="info">
-            Csomagoló programon belül a G1-es részben, a csomagoló program számát kell beírni. X17 - X27 -ig üres bankok! 
-            Tálcákhoz társított program számok az alábbi legördülő listában kiválaszthatók.
-        </div>
-        <label for="trays">Válassz egy tálcát:</label>
-        <select id="trays">
-            <option value="1">X3</option>
-            <option value="2">X4</option>
-            <option value="3">X5</option>
-            <option value="4">Xplaceholder</option>
-            <option value="5">X11</option>
-            <option value="6">X12</option>
-            <option value="7">X13</option>
-            <option value="8">X14</option>
-            <option value="9">X20</option>
-            <option value="10">X26</option>
-            <option value="11">X34</option>
-            <option value="12">X35</option>
-            <option value="13">X41</option>
-            <option value="14">X42</option>
-            <option value="15">X7</option>
-            <option value="16">X36</option>
-            <option value="28">Prog_028</option>
-            <option value="29">Prog_029</option>
-            <option value="30">Prog_030</option>
-            <option value="31">Prog_005</option>
-        </select>
-        <p id="selected-program" class="bold">A kiválasztott tálca: -</p>
-        <button id="dropdown-btn">Mit nekem legördülő lista</button>
-        <div id="dropdown-result" class="result" style="display: none;"></div>
-    </div>
+  <div class="container">
+    <a href="javascript:history.back()" class="back-button">← Vissza</a>
+    <h1>Csomagoló Információk</h1>
+    
+    <fieldset>
+      <legend>Útmutató</legend>
+      <p>
+        A csomagoló program G1-es részébe a kiválasztott tálca program számát kell beírni.
+        Az X17 - X27 tartományban jelenleg üres bankok vannak.
+      </p>
+    </fieldset>
 
-    <script>
-        const dropdownBtn = document.getElementById('dropdown-btn');
-        const dropdownResult = document.getElementById('dropdown-result');
-        const traysDropdown = document.getElementById('trays');
-        const selectedProgram = document.getElementById('selected-program');
+    <label for="trays">Válassz egy tálcát:</label>
+    <select id="trays">
+      <option value="1">X3</option>
+      <option value="2">X4</option>
+      <option value="3">X5</option>
+      <option value="4">Xplaceholder</option>
+      <option value="5">X11</option>
+      <option value="6">X12</option>
+      <option value="7">X13</option>
+      <option value="8">X14</option>
+      <option value="9">X20</option>
+      <option value="10">X26</option>
+      <option value="11">X34</option>
+      <option value="12">X35</option>
+      <option value="13">X41</option>
+      <option value="14">X42</option>
+      <option value="15">X7</option>
+      <option value="16">X36</option>
+      <option value="28">Prog_028</option>
+      <option value="29">Prog_029</option>
+      <option value="30">Prog_030</option>
+      <option value="31">Prog_005</option>
+    </select>
 
-        let isDropdownVisible = false; // A tartalom megjelenítésének állapota
+    <p id="selected-program"><strong>A kiválasztott tálca:</strong> -</p>
 
-        traysDropdown.addEventListener('change', function () {
-            const selectedTray = traysDropdown.options[traysDropdown.selectedIndex];
-            selectedProgram.textContent = `A kiválasztott tálca: ${selectedTray.text}, Program száma: ${selectedTray.value}`;
-        });
+    <button id="dropdown-btn">Mutasd a teljes listát</button>
 
-        dropdownBtn.addEventListener('click', function () {
-            isDropdownVisible = !isDropdownVisible; // Állapot váltása
-            if (isDropdownVisible) {
-                dropdownBtn.textContent = "Ácsi! Csak kell nekem legördülő lista!";
-                dropdownResult.style.display = 'block';
-                dropdownResult.textContent = `
+    <div id="dropdown-result" class="result"></div>
+  </div>
+
+  <script>
+    const dropdownBtn = document.getElementById('dropdown-btn');
+    const dropdownResult = document.getElementById('dropdown-result');
+    const traysDropdown = document.getElementById('trays');
+    const selectedProgram = document.getElementById('selected-program');
+
+    let isDropdownVisible = false;
+
+    traysDropdown.addEventListener('change', function () {
+      const selectedTray = traysDropdown.options[traysDropdown.selectedIndex];
+      selectedProgram.innerHTML = `<strong>A kiválasztott tálca:</strong> ${selectedTray.text}, Program száma: ${selectedTray.value}`;
+    });
+
+    dropdownBtn.addEventListener('click', function () {
+      isDropdownVisible = !isDropdownVisible;
+      if (isDropdownVisible) {
+        dropdownBtn.textContent = "Rejtsd el a listát";
+        dropdownResult.style.display = 'block';
+        dropdownResult.textContent = `
 X3 > P001
 X4 > P002
 X5 > P003
@@ -149,11 +197,11 @@ Prog_029 > P029
 Prog_030 > P030
 Prog_005 > P031
 `.trim();
-            } else {
-                dropdownBtn.textContent = "Mit nekem legördülő lista";
-                dropdownResult.style.display = 'none';
-            }
-        });
-    </script>
+      } else {
+        dropdownBtn.textContent = "Mutasd a teljes listát";
+        dropdownResult.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
