@@ -1,0 +1,86 @@
+[
+  {
+    "IP address": "192.168.213.101",
+    "Sensor name": "cam1st59",
+    "Hardware": "V20C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.102",
+    "Sensor name": "cam2st65",
+    "Hardware": "V20C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.103",
+    "Sensor name": "cam3st70",
+    "Hardware": "V20C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.104",
+    "Sensor name": "cam4st75",
+    "Hardware": "V20C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.105",
+    "Sensor name": "cam5st77",
+    "Hardware": "V10C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.106",
+    "Sensor name": "cam6st84",
+    "Hardware": "V10C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.107",
+    "Sensor name": "cam7st55",
+    "Hardware": "V20C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.108",
+    "Sensor name": "cam8st",
+    "Hardware": "V20C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.109",
+    "Sensor name": "cam88st",
+    "Hardware": "V10C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.110",
+    "Sensor name": "cam91st",
+    "Hardware": "V10C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.111",
+    "Sensor name": "cam79st",
+    "Hardware": "V20C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.112",
+    "Sensor name": "cam80st",
+    "Hardware": "V20C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.151",
+    "Sensor name": "cam51st",
+    "Hardware": "V20C",
+    "Version": "2.10.2.2"
+  },
+  {
+    "IP address": "192.168.213.153",
+    "Sensor name": "cam53st",
+    "Hardware": "V20C",
+    "Version": "2.10.2.2"
+  }
+]

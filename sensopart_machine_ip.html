@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensopart kamerák IP címei gépszerint</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      border-bottom: 2px solid #eee;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 1.7em;
+      color: #c40000;
+      margin-right: 12px;
+    }
+
+    .subtitle {
+      flex-grow: 1;
+      font-size: 1em;
+      color: #222;
+    }
+
+    .back-button {
+      padding: 10px 16px;
+      background-color: #c40000;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 0.95em;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .back-button:hover {
+      background-color: #a80000;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .machine-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      background-color: #fafafa;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .machine-row:hover {
+      background-color: #f0f0f0;
+    }
+
+    .data-container {
+      margin-top: 10px;
+      display: none;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scaleY(0.95);}
+      to {opacity: 1; transform: scaleY(1);}
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background: #fff;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Rosenberger</div>
+    <div class="subtitle">- Sensopart kamerák IP címei gépszerint</div>
+    <button class="back-button" onclick="window.location.href='index.html'">Vissza</button>
+  </header>
+  <main>
+    <script>
+      const machines = [
+        { id: "HMTD1", date: "2025.06.22" },
+        { id: "HMTD2", date: "2025.06.22" },
+        { id: "MTD1", date: "2025.06.22" },
+        { id: "MTD2", date: "2025.06.22" },
+        { id: "MTD3", date: "2025.06.22" },
+        { id: "MTD4", date: "2025.06.22" },
+        { id: "MTD5", date: "2025.06.22" },
+        { id: "MTD6", date: "2025.06.22" },
+        { id: "MTD8", date: "2025.06.22" },
+        { id: "SF1", date: "2025.06.22" },
+        { id: "SF2", date: "2025.06.22" },
+        { id: "HFM", date: "2025.06.22" },
+        { id: "Hybrid", date: "2025.06.22" }
+      ];
+
+      machines.forEach(machine => {
+        document.write(`
+          <div class="machine-row" onclick="toggleData('${machine.id}')">
+            <span><strong>Gép:</strong> ${machine.id}</span>
+            <span><strong>Adatok frissítve:</strong> ${machine.date}</span>
+          </div>
+          <div id="${machine.id}-data" class="data-container"></div>
+        `);
+      });
+    </script>
+  </main>
+
+  <script>
+    function toggleData(machineId) {
+      const container = document.getElementById(machineId + '-data');
+      if (container.style.display === 'block') {
+        container.style.display = 'none';
+      } else {
+        fetch(machineId + '.json')
+          .then(response => response.json())
+          .then(data => {
+            const table = document.createElement('table');
+            const headers = Object.keys(data[0]);
+            const thead = document.createElement('thead');
+            const tr = document.createElement('tr');
+            headers.forEach(header => {
+              const th = document.createElement('th');
+              th.textContent = header;
+              tr.appendChild(th);
+            });
+            thead.appendChild(tr);
+            table.appendChild(thead);
+
+            const tbody = document.createElement('tbody');
+            data.forEach(row => {
+              const tr = document.createElement('tr');
+              headers.forEach(header => {
+                const td = document.createElement('td');
+                td.textContent = row[header];
+                tr.appendChild(td);
+              });
+              tbody.appendChild(tr);
+            });
+            table.appendChild(tbody);
+            container.innerHTML = '';
+            container.appendChild(table);
+            container.style.display = 'block';
+          });
+      }
+    }
+  </script>
+</body>
+</html>
